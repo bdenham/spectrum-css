@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-helptext.css";
+/* @import "../vars/css/components/spectrum-helptext.css";
 
 .spectrum-HelpText--sizeS {
   @remapvars {
@@ -42,21 +42,70 @@ governing permissions and limitations under the License.
     filter: color;
     replace: --spectrum-helptext$1-;
   }
+} */
+
+.spectrum-HelpText {
+  --spectrum-helptext-line-height: var(--spectrum-line-height-100);
+  /* --spectrum-helptext-cjk-line-height: var(--spectrum-CJK-line-height-100); */
+}
+
+.spectrum-HelpText--sizeS {
+  --spectrum-helptext-min-height: var(--spectrum-component-height-75);
+  /* --spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-75); */
+  --spectrum-helptext-font-size: var(--spectrum-font-size-75);
+  /* --spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-75); */
+  /* --spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-small); */
+  /* --spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-75); */
+  /* --spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-75); */
+}
+
+.spectrum-HelpText--sizeM {
+  --spectrum-helptext-min-height: var(--spectrum-component-height-75);
+  /* --spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-100); */
+  --spectrum-helptext-font-size: var(--spectrum-font-size-75);
+  /* --spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-75); */
+  /* --spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-medium); */
+  /* --spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-75); */
+  /* --spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-75); */
+}
+
+.spectrum-HelpText--sizeL {
+  --spectrum-helptext-min-height: var(--spectrum-component-height-100);
+  /* --spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-200); */
+  --spectrum-helptext-font-size: var(--spectrum-font-size-100);
+  /* --spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-100); */
+  /* --spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-large); */
+  /* --spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-100); */
+  /* --spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-100); */
+}
+
+.spectrum-HelpText--sizeXL {
+  --spectrum-helptext-min-height: var(--spectrum-component-height-200);
+  /* --spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-300); */
+  --spectrum-helptext-font-size: var(--spectrum-font-size-200);
+  /* --spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-200); */
+  /* --spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-extra-large); */
+  /* --spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-200); */
+  /* --spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-200); */
 }
 
 .spectrum-HelpText {
+  color: var(--spectrum-helptext-content-color-default);
   display: flex;
-  font-size: var(--spectrum-helptext-neutral-texticon-text-size);
-  .spectrum-HelpText-validationIcon {
+  font-size: var(--spectrum-helptext-font-size);
+  min-height: var(--spectrum-helptext-min-height);
+  
+  /* .spectrum-HelpText-validationIcon {
     margin-inline-end: var(--spectrum-helptext-neutral-texticon-icon-gap);
     padding-block: var(--spectrum-helptext-negative-texticon-icon-padding-top) var(--spectrum-helptext-negative-texticon-icon-padding-bottom);
     flex-shrink: 0;
-  }
+  } */
+  
   .spectrum-HelpText-text {
-    margin-inline-end: var(--spectrum-helptext-neutral-texticon-icon-gap);
-    padding-block: var(--spectrum-helptext-neutral-textonly-text-padding-top) var(--spectrum-helptext-neutral-textonly-text-padding-bottom);
-    line-height: var(--spectrum-helptext-neutral-textonly-text-line-height);
-    text-transform: var(--spectrum-helptext-neutral-textonly-text-transform);
-    letter-spacing: var(--spectrum-helptext-neutral-textonly-text-letter-spacing);
+    /* margin-inline-end: var(--spectrum-helptext-neutral-texticon-icon-gap); */
+    /* padding-block: var(--spectrum-helptext-neutral-textonly-text-padding-top) var(--spectrum-helptext-neutral-textonly-text-padding-bottom); */
+    line-height: var(--spectrum-helptext-line-height);
+    /* text-transform: var(--spectrum-helptext-neutral-textonly-text-transform); */
+    /* letter-spacing: var(--spectrum-helptext-neutral-textonly-text-letter-spacing); */
   }
 }
